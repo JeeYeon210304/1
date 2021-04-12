@@ -1,0 +1,25 @@
+package db;
+
+
+public class SqlMapConfig {
+
+	private SqlSessionFactory sqlSessionFactory;
+	
+	public SqlSessionFactory getSqlSessionFactory() {
+		
+		// 경로일 때는 /
+		String resource = "com/board/db/mybatis-config.xml";
+		
+		try {
+			InputStream inputStream = Resources.getResourceAsStream(resource);
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+			inputStream.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return sqlSessionFactory;
+	}
+	
+}

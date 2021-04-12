@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="BoardMapper">
+	
+	<resultMap  type="BoardDto" id="BoardMap">
+		<result property="postId" column="POST_ID"/>
+	</resultMap>	
+
+	<insert id="accompany_insert" parameterType="BoardDto">
+		INSERT INTO POST VALUES
+		(#{postUserNo}, POST_ID_SEQ.NEXTVAL, POST_DONGHANG_SEQ.NEXTVAL, 'ACCOMPANY', #{postCategoryName},#{postTitle},#{postContent},
+		#{postMdate},SYSDATE,0,0,0,'N', #{postLatitude}, #{postLongitude}, NULL)
+	</insert>
+	
+</mapper>

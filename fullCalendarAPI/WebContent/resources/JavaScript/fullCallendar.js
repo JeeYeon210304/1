@@ -1,17 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-	var calendarEl = document.getElementById('calendar');
-	var calendar = new FullCalendar.Calendar(calendarEl, {
-		selectable: true,
-		headerToolbar: {
-			left: 'prev,next today',
-			center: 'title',
-			right: 'dayGridMonth,timeGridWeek,timeGridDay'
-		},
-		dateClick: function(info) {
-			var postMdate = document.getElementById('postMdate');
-			postMdate.innerHTML =  info.dateStr;
-			document.getElementsByName("postMdate")[0].value = info.dateStr;
-		}
-	});
-	calendar.render();
+	document.addEventListener('DOMContentLoaded', function() {
+			var selectDate = document.getElementByName('selectDate');
+			var calendarEl = document.getElementById('calendar');
+			var calendar = new FullCalendar.Calendar(calendarEl, {
+				events: [
+		               {
+		                   title: '약속일',
+		                   start: '2021-04-03'
+		               }
+		            ]
+			});	
+		    calendar.render();
+		});	
 });

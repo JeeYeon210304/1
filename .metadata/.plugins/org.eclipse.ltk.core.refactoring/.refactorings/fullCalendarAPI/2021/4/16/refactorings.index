@@ -4,3 +4,26 @@
 1618207327156	Delete element
 1618207352186	Delete element
 1618234361640	Delete element
+1618239112420	Rename package 'db'
+1618239115297	Rename package 'dt'
+1618239254293	Rename type 'dto'
+1618239942069	Rename type 'calendardto'
+1618252657561	Delete element
+1618252691119	Move compilation unit
+1618252722229	Move compilation unit
+1618252728152	Move file
+1618252736625	Move file
+1618252744978	Move compilation unit
+1618252749383	Delete element
+1618253098927	Rename resource 'Board-mapper.xml'
+1618253376581	Delete element
+1618253493235	Move 'ojdbc6.jar' to 'lib'
+1618253545480	Copy file
+1618253784984	Rename resource 'myboard-mapper.xml'
+1618254031263	Delete element
+1618254038099	Delete element
+1618254041991	Delete element
+1618254048335	Delete element
+1618255336687	Delete element
+1618255343263	Delete element
+1618255396283	Delete element

@@ -1,0 +1,22 @@
+package dto;
+
+public class dto {
+
+	private String selectDate;
+	
+	public dto() {}
+
+	public dto(String selectDate) {
+		super();
+		this.selectDate = selectDate;
+	}
+
+	public String getSelectDate() {
+		return selectDate;
+	}
+
+	public void setSelectDate(String selectDate) {
+		this.selectDate = selectDate;
+	}
+	
+}

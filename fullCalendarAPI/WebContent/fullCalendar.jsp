@@ -12,12 +12,10 @@
 <body>
 
 
-
-약속일자 : <div id='postMdate'></div>
-<div id='calendar'></div>
-
-
-
+	약속일자 : <div id='postMdate'></div>
+	<div id='calendar'></div>
+	<input type="hidden" name="selectDate">
+	
 <script type="text/javascript" src="/fullCalendarAPI/resources/JavaScript/fullCallendar.js"></script>
 <script src='/fullCalendarAPI/resources/API/fullcalendar-5.6.0/lib/main.js'></script>
 <link href='/fullCalendarAPI/resources/API/fullcalendar-5.6.0/lib/main.css' rel='stylesheet' />

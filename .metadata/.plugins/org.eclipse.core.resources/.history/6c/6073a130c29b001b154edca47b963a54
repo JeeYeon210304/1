@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
+<%response.setContentType("text/html; charset=UTF-8");%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>∴fullCalendar∵</title>
+<link href='fullcalendar/main.css' rel='stylesheet' />
+</head>
+<body>
+
+<form action="/fullCallendar." target="param" method="post">
+
+	약속일자 : <div id='postMdate'></div>
+	<div id='calendar'></div>
+	<input type="hidden" name="selectDate">
+	
+	<input type="submit">
+	
+</form>
+
+  <iframe id="if" name="param"></iframe>
+  
+  
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		var calendarEl = document.getElementById('calendar');
+		var calendar = new FullCalendar.Calendar(calendarEl, {
+			events: [
+	               {
+	                   title: '약속일',
+	                   start: "${dto.postMdate}"
+	               }
+	            ]
+		});	
+	    calendar.render();
+	});	
+</script>
+<script type="text/javascript" src="/fullCalendarAPI/resources/JavaScript/fullCallendar.js"></script>
+<script src='/fullCalendarAPI/resources/API/fullcalendar-5.6.0/lib/main.js'></script>
+<link href='/fullCalendarAPI/resources/API/fullcalendar-5.6.0/lib/main.css' rel='stylesheet' />
+</body>
+</html>

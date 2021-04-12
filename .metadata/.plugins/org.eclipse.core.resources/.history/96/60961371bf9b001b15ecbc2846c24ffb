@@ -1,0 +1,34 @@
+package db;
+
+import java.io.IOException;
+import java.io.Reader;
+
+
+public class SqlMapConfig {
+
+	private SqlSessionFactory sqlSessionFactory;
+	
+	public SqlSessionFactory getSqlSessionFactory() {
+		
+		String resource = "db/config.xml";
+		Reader reader = null;
+		
+		try {
+			reader = Resources.getResourceAsReader(resource);
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				reader.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return sqlSessionFactory;
+	}
+	
+}

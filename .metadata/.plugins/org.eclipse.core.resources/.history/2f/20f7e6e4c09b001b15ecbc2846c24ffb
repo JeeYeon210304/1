@@ -1,0 +1,19 @@
+package dao;
+
+import dto.calendarDto;
+
+public class calendarDao {
+
+	calendarDao dao = new calendarDao();
+	
+	public calendarDao outPut(calendarDto dto) {
+		int res = 0;
+		try(SqlSession session = getSqlSessionFactory().openSession(true)){
+			res = session.insert("boardmapper.insert", dto);
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		return res;
+	
+}

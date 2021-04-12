@@ -1,0 +1,22 @@
+package dto;
+
+public class calendarDto {
+
+	private String selectDate;
+	
+	public calendarDto() {}
+
+	public calendarDto(String selectDate) {
+		super();
+		this.selectDate = selectDate;
+	}
+
+	public String getSelectDate() {
+		return selectDate;
+	}
+
+	public void setSelectDate(String selectDate) {
+		this.selectDate = selectDate;
+	}
+	
+}
