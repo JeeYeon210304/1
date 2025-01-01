@@ -77,7 +77,12 @@
 							                        
 							            $("#MapAddress").val(mouseEvent)
 										
-							           // var markerSpace = document.getElementById("makerSpace");
+							           
+							            //!!!설명부분
+							            // postLatitude를 가져와 test 변수로 만들었다.
+							            // detailAddr 변수에 담긴 지번수로를 가져와 afterString으로 <>를 잘라주고있다.
+							           // 잘라준 값을 test변수의 값으로 지정했다.
+							           
 							            var test = document.getElementsByName("postLatitude")[0];
 							            
 							            var afterString = detailAddr.slice(detailAddr.indexOf(">")+1, detailAddr.lastIndexOf("<"));

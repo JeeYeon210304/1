@@ -11,25 +11,39 @@
 </head>
 <body>
 
-
-					<p><em>지도를 클릭해주세요!</em></p>
-						약속장소	<br/>
-						<div id="makerSpace" >
-					 지번주소&emsp;<input type="text" name="postLongitude" value=""/>
-					
-						</div>
-						<br>
-						<input type="hidden" id="MapAddress" name="MapAddress" value="" /> 
-						<div class="map_wrap">
-						    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-						    <div class="hAddr">
-						        <span class="title">지도중심기준 행정동 주소정보</span>
-						        <span id="centerAddr"></span>
-						    </div>
-						</div> 
+		<p><em>달력을 클릭해주세요!</em></p>
+	<!-- 달력API -->		<div id='postMdate'></div>
+						    
+		<input type="hidden" name="postMdate" value="" />
+		<div id='calendar'></div>
+		<p><em>시계아이콘을 클릭해 약속시간을 정해주세요</em></p>
+		<input type="time" name="postLatitude"/>
 	
 <script type="text/javascript" src="/fullCalendarAPI/resources/JavaScript/fullCallendar.js"></script>
 <script src='/fullCalendarAPI/resources/API/fullcalendar-5.6.0/lib/main.js'></script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		var calendarEl = document.getElementById('calendar');
+		var calendar = new FullCalendar.Calendar(calendarEl, {
+			selectable: true,
+			headerToolbar: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'dayGridMonth,timeGridWeek,timeGridDay'
+			},
+			// 위에까지가 기본 달력화면
+			
+			// 아래가 클릭기능. postMdate라는 id를 가진 태그를 변수로 만들어 
+			// info.dateStr이라는 약속일자를 담아주고 있다.
+			dateClick: function(info) {
+				var postMdate = document.getElementById('postMdate');
+				postMdate.innerHTML = "약속일자 : " + info.dateStr;
+				document.getElementsByName("postMdate")[0].value = info.dateStr;
+			}
+		});
+		calendar.render();
+	});
+</script>
 <link href='/fullCalendarAPI/resources/API/fullcalendar-5.6.0/lib/main.css' rel='stylesheet' />
 </body>
 </html>

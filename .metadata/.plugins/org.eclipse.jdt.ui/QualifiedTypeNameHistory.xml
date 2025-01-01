@@ -6,4 +6,8 @@
     <fullyQualifiedTypeName name="dto.calendarDto"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="board.biz.BoardBiz"/>
+    <fullyQualifiedTypeName name="board.biz.BoardBizImpl"/>
+    <fullyQualifiedTypeName name="board.dto.BoardDto"/>
+    <fullyQualifiedTypeName name="board.dao.BoardDao"/>
 </qualifiedTypeNameHistroy>

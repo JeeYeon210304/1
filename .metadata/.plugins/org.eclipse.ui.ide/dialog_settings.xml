@@ -6,12 +6,45 @@
 	</section>
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
+			<item value="org.eclipse.ui.workbenchTransfer"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Workspaces\modules\Module_Top"/>
+			<item value="C:\Workspaces\modules\Module_TextEffect"/>
+			<item value="C:\Workspaces\modules\Module_Slide"/>
+			<item value="C:\Workspaces\modules\Module_Regex"/>
+			<item value="C:\Workspaces\modules\Module_KakaoMapAPI"/>
+			<item value="C:\Workspaces\modules\Module_KakaoMap"/>
+			<item value="C:\Workspaces\modules\Module_KakaoLoginApi"/>
+			<item value="C:\Workspaces\modules\Module_Introduce"/>
+			<item value="C:\Workspaces\modules\Module_google"/>
+			<item value="C:\Workspaces\modules\Module_fullCalendarAPI"/>
+			<item value="C:\Workspaces\modules\Module_daumPostcode"/>
+			<item value="C:\Workspaces\modules\Modul_SummerNoteAPI"/>
+			<item value="C:\Workspaces\modules\Modul_Payment"/>
+			<item value="C:\Workspaces\modules\Modul_NaverShoppingAPI"/>
+			<item value="C:\Workspaces\modules\Modul_Paging"/>
+			<item value="C:\Workspaces\modules\Modul_NaverLoginAPI"/>
+			<item value="C:\Workspaces\modules\Modul_InfinityScroll"/>
+			<item value="C:\Workspaces\modules\Modul_imageUpload"/>
+			<item value="C:\Workspaces\modules\Modul_FullPage"/>
+			<item value="C:\Workspaces\modules\Modul_ChartJS"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
 		</list>
 	</section>
 </section>
