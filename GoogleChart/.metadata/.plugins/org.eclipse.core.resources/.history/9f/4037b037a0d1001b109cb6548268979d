@@ -1,0 +1,11 @@
+package com.google.chart.biz;
+
+
+import com.google.chart.dto.GoogleChartDto;
+
+public interface GoogleChartBiz {
+
+	public GoogleChartDto chartData(String chartId);
+	public int insert(GoogleChartDto dto);
+	
+}

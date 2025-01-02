@@ -1,0 +1,90 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	<!-- 구글차트 -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+    	  
+    	$.ajax({
+    		url :"/selectList.do", 
+    		type : "post",
+    		dataType : "json",
+    		success : function(data){
+    			json = data;
+    		}
+    			
+    	}) 
+    	  
+        var data = google.visualization.arrayToDataTable([
+          ['chartMdate', 'chartreadingtime'],
+          ['2004',  1],
+          ['2005',  600]
+        ]);
+
+        var options = {
+          title: '독서량기록',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+       
+        
+        for(var i = 0; i < json.length; i++){
+        	data.addRow([json[i].id, json[i].expect, json[i].fert.region, json[i].pop]);
+        }
+        
+        
+        
+		// 입력된 데이터들을 바탕으로 차트를 그리는 곳.
+		// 따라서 이 코드 전에 데이터 입력 및 수정을 해야 한다.
+        chart.draw(data, options);
+      }
+    </script>
+    
+</head>
+<body>
+<!-- 구글차트 위치-->
+	<div id="curve_chart" style="width:900px; height:500px"></div>
+	
+<!-- 독서량 전달 -->
+	<p>독서량추가</p>
+	<form action="CRTimeInsert.do" method="post">
+		<!-- 날짜 -->
+		<input type="date" name="chartMdate" style="width:30%" />
+		<br/>
+		<!-- 독서한 시간(분) -->
+		<input type="range" min="1" max="600" step="1" style="width:30%" id="chartReadingTime" name="chartReadingTime" oninput="document.getElementById('CRTime').innerHTML=this.value;">
+		<br/>
+		<span id="CRTime" ></span>분
+		<input type="submit" value="등록" />
+	</form>
+
+	<input type="hidden" id="chartMdate" />
+	<input type="hidden" id="chartReadingTime" />
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Workspaces\GoogleChart\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3254473734.index
+3447214322.index
+3977480247.index
+866333229.index
+3033112632.index
+2317504700.index

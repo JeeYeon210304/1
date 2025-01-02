@@ -1,0 +1,49 @@
+package com.google.chart.dao;
+
+
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.google.chart.dto.GoogleChartDto;
+
+@Repository
+public class GoogleChartDaoImpl implements GoogleChartDao {
+
+	@Autowired
+	private SqlSessionTemplate sqlSession;
+	
+	@Override
+	public GoogleChartDto chartData(String chartId) {
+		
+		GoogleChartDto res = null;
+		
+		try {
+			res = sqlSession.selectOne(NAMESPACE + "chartData", chartId);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
+
+	
+	@Override
+	public int insert(GoogleChartDto dto) {
+		
+		int res = 0;
+		
+		try {
+			res = sqlSession.insert(NAMESPACE + "insert", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
+
+
+
+}
